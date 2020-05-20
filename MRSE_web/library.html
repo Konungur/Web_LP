@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="library_page_styles.css">
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel = "icon" href ="Logo.png"
+          type = "image/x-icon">
+</head>
+<body>
+<header class="header">
+    <ul id="top_navigation">
+        <li>
+            <a href="Main.html">Home</a>
+        </li>
+        <li>
+            <a href="#Footer_final_text">Contact</a>
+        </li>
+        <li>
+            <a href="login.html">Log in</a>
+        </li>
+        <li>
+            <a href="register.html">Register</a>
+        </li>
+    </ul>
+    <img id="header_img" src="Logo.png" alt="Recommendations for you!">
+    <h1 id="main_greeting">Discover new!</h1>
+</header>
+
+<main>
+    <h1 class="meh">Library!</h1>
+    <div class="container">
+        <button id="switch" onclick="toggleTheme()">Switch</button>
+    </div>
+    <script>
+        function setTheme(themeName) {localStorage.setItem('theme', themeName);document.documentElement.className = themeName;}
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark') {setTheme('theme-light');}
+            else {setTheme('theme-dark');}}
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {setTheme('theme-dark');}
+            else {setTheme('theme-light');}})();
+    </script>
+    <table class="table_lib">
+        <tr class="table_names">
+            <th class="table_name">Action</th>
+            <th class="table_name">Horror</th>
+            <th class="table_name">Comedy</th>
+            <th class="table_name">TV-series</th>
+        </tr>
+        <tr class="table_row">
+            <td class="table_cell">John Wick</td>
+            <td class="table_cell">Insidious</td>
+            <td class="table_cell">I</td>
+            <td class="table_cell">Peaky Blinders</td>
+        </tr>
+        <tr class="table_row">
+            <td class="table_cell">Commuter</td>
+            <td class="table_cell">Woman in Black</td>
+            <td class="table_cell">Dont</td>
+            <td class="table_cell">Doctor Who</td>
+        </tr>
+        <tr class="table_row">
+            <td class="table_cell">Taken</td>
+            <td class="table_cell">Invisible Man</td>
+            <td class="table_cell">Watch</td>
+            <td class="table_cell">GOT</td>
+        </tr>
+        <tr class="table_row">
+            <td class="table_cell">Bad Boys</td>
+            <td class="table_cell">Evil Dead</td>
+            <td class="table_cell">Comedies</td>
+            <td class="table_cell">Altered Carbon</td>
+        </tr>
+    </table>
+    <br><br><br><br>
+</main>
+
+<footer class="footer">
+    <p id="contacts">
+        Contact us via:<br>
+        <b>Email:</b>demoris19@gmail.com<br>
+        <b>Cellphone:</b> +38067*******<br>
+        <b>Address:</b> Ukraine, Lviv, smth Street/smth Number<br>
+    </p>
+    <p id="Footer_final_text">
+        Copyright © 2020  Mrovie <br>
+        All Rights Reserved
+    </p>
+</footer>
+
+</body>
+</html>

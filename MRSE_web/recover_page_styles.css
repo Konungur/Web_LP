@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+* {
+    box-sizing: border-box;
+    font-family: Rubik;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color: #202020;
+    background-size: cover;
+    height: 228px;
+}
+#top_navigation{
+    text-align: right;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #202020;
+}
+#top_navigation li{
+    display: inline;
+}
+
+#top_navigation a{
+    display: inline-block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+#top_navigation a:hover{
+    background-color: rgba(252, 202, 3, .9)
+}
+#main_greeting{
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    margin-top: 60px;
+}
+#header_img{
+    text-align: left;
+    width: 200px;
+    height: 200px;
+    position:absolute;
+    left: 13px;
+    top: 13px;
+}
+
+
+body{
+    background:  #3d3d3d;
+}
+
+.login-wrapper{
+    margin: 80px auto;
+    width: 400px;
+    text-align: center;
+}
+
+form h1{
+    color: orange;
+    font-size: 3em;
+    font-weight: normal;
+    letter-spacing: 0;
+    font-family: Rubik;
+}
+
+form h1 span{
+    font-weight: 500;
+    letter-spacing: 0;
+}
+form p{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+form input{
+    border: none;
+    margin: 5px;
+}
+
+form .input-row{
+    margin: 1.8em 0;
+    overflow: hidden;
+}
+form .input-row i{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+
+
+form input[type="text"],form input[type="password"] {
+    padding: 0.8em 0.8em 0.8em 0;
+    font-size: 1.4em;
+    color: black;
+    width: 300px;
+}
+
+form input[type="text"]:focus,form input[type="password"]:focus {
+    outline: 0;
+}
+
+form input[type="submit"]{
+    border: none;
+    background: #fcca03;
+    color: black;
+    font-size: 1.6em;
+    padding: 0.7em 1.2em;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+form input[type="submit"]:hover {
+    background: darkorange;
+    opacity: 0.8;
+}
+
+form .reset{
+    margin-left: 0.2em;
+    color: white;
+    font-size: 1.4em;
+}
+
+form .reset a{
+    color: white;
+}
+
+form .reset a:hover{
+    text-decoration: none;
+}
+
+
+.footer {
+    position: page;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #202020;
+    text-align: center;
+}
+#Footer_final_text{
+    text-align: center;
+    color: white;
+}
+#contacts{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin: 5px;
+}

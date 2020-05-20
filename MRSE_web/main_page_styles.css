@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+* {
+    box-sizing: border-box;
+    font-family: Rubik;
+}
+html, body{
+    background-color: var(--color-secondary);
+    margin: 0;
+    padding: 0;
+}
+.header_content{
+    background-color: #202020;
+}
+.top_navigation{
+    text-align: right;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: visible;
+    background-color: #202020;
+}
+.top_navigation a{
+    display: inline-block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+.top_navigation a:hover{
+    background-color: rgba(252, 202, 3, .9)
+}
+
+.dropdown {
+    float: right;
+    overflow: visible;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 1.4em;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 20px;
+    background-color: inherit;
+
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cccccc;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    display: flex;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #fcca03;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#main_greeting{
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    margin-top: 60px;
+    background-color: #202020;
+}
+#header_img{
+    background-color: #202020;
+    text-align: right;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    position: relative;
+    object-fit: contain;
+    left: 13px;
+    top: 13px;
+}
+.browse_movies{
+    text-align: center;
+    padding: 20px;
+}
+#browse_button{
+    background-color: #fcca03;
+    border: none;
+    color: #141414;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 8px;
+}
+#browse_button:hover{
+    background-color: rgba(252, 202, 3, .9)
+}
+#recommend_button {
+    background-color: #fcca03;
+    border: none;
+    color: #141414;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 8px;
+
+}
+#recommend_button:hover {
+    background-color: rgba(252, 202, 3, .9)
+}
+
+.week_pick{
+    background-color: var(--color-secondary);
+    color: var(--text-color);
+    margin: 28px;
+    text-align: center;
+    font-size: 38px;
+}
+@media screen and (min-width: 320px) {
+    .movies {
+        box-sizing: border-box;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+        grid-auto-rows: minmax(125px, auto);
+        grid-gap: 20px 35px;
+        background-color: var(--color-secondary);
+    }
+    .movie_frame {
+        margin: 30px 20px;
+        background-color: var(--box-color);
+        color: var(--text-color);
+        border-radius: 5px;
+        padding: 0;
+        font-size: 1em;
+    }
+
+    .movie_poster {
+        margin: 20px;
+        height: 340px;
+        width: 225px;
+    }
+
+    .movie_description{
+        margin: 0;
+    }
+}
+
+input[id^="spoiler"]{
+    display: none;
+}
+input[id^="spoiler"] + label {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 5px 20px;
+    background: var(--button-color);
+    color: var(--font-color);
+    text-align: center;
+    font-size: 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .6s;
+}
+input[id^="spoiler"]:checked + label {
+    color: #333;
+    background: #ccc;
+}
+input[id^="spoiler"] ~ .spoiler {
+    width: 90%;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 20px;
+    padding: 10px;
+    color: black;
+    background: #b2b2b2;
+    border-radius: 8px;
+    transition: all .6s;
+}
+input[id^="spoiler"]:checked + label + .spoiler{
+    height: auto;
+    opacity: 1;
+    padding: 10px;
+}
+
+#date_button{
+    background-color: var(--color-primary);
+    border: none;
+    position: center;
+    color: var(--button-text);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 25px;
+    border-radius: 8px;
+}
+#date_button:hover {
+    background-color: rgba(252, 202, 3, .9)
+}
+
+#date_placeholder{
+    color: var(--text-color);
+}
+.theme-light {
+    --color-primary: #fcca03;
+    --color-secondary: #fbfbfe;
+    --color-accent: #fd6f53;
+    --box-color: #fcca03;
+    --font-color: white;
+    --button-color: #202020;
+    --button-text: black;
+    --text-color: black;
+}
+.theme-dark {
+    --color-primary: #fcca03;
+    --color-secondary: #3d3d3d;
+    --color-accent: #12cdea;
+    --box-color: #202020;
+    --font-color: black;
+    --button-color: #fcca03;
+    --button-text: black;
+    --text-color: white;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h1 {
+    color: var(--font-color);
+}
+.container button {
+    color: var(--button-text);
+    background: var(--color-primary);
+    border: none;
+    position: center;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 25px;
+    border-radius: 8px;
+}
+#switch:hover {
+    background-color: rgba(252, 202, 3, .9)
+}
+
+
+.footer {
+    position: page;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #202020;
+    text-align: center;
+}
+#Footer_final_text{
+    text-align: center;
+    color: white;
+}
+#contacts{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin: 5px;
+}

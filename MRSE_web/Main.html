@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main_page_styles.css">
+    <meta charset="UTF-8">
+    <title>Recommendations for you!</title>
+    <link rel = "icon" href =
+            "Logo.png"
+          type = "image/x-icon">
+</head>
+<body class="page">
+<header class="header">
+    <div class="top_navigation">
+        <div class="dropdown">
+            <button class="dropbtn">More
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#Footer_final_text">Contact</a>
+                <a href="recover.html">About Us</a>
+                <a href="recover.html">Special</a>
+                <a href="recover.html">Dummy link</a>
+            </div>
+        </div>
+        <a href="Main.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="login.html">Log in</a>
+    </div>
+    <div class="header_content">
+        <img id="header_img" src="Logo.png" alt="Recommendations for you!">
+        <h1 id="main_greeting">Get your own movie recommendation!</h1>
+        <div class="browse_movies">
+            <form action="library.html">
+                <button id="browse_button" type="submit">Browse movies</button>
+                <button id="recommend_button">Get recommendation</button>
+            </form>
+        </div>
+    </div>
+</header>
+<main>
+    <h5 class="week_pick">Find our easter eggs in movie descriptions</h5>
+    <h2 class="week_pick">This week pick`s:</h2>
+    <div class="container">
+        <button id="switch" onclick="toggleTheme()">Switch</button>
+    </div>
+    <script>
+        function setTheme(themeName) {localStorage.setItem('theme', themeName);document.documentElement.className = themeName;}
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark') {setTheme('theme-light');}
+            else {setTheme('theme-dark');}}
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {setTheme('theme-dark');}
+            else {setTheme('theme-light');}})();
+    </script>
+    <div class="movies">
+        <div class="movie_frame">
+            <img class="movie_poster" src="everest_logo.jpeg" alt="Everest Poster">
+            <h2>Everest</h2>
+            <input type="checkbox" id="spoiler1" />
+            <label for="spoiler1">Description</label>
+            <div class="spoiler">
+                <p class="movie_description">Everest is a 2015 biographical adventure film directed and produced by Baltasar
+                    Kormákur and written by William Nicholson and Simon Beaufoy. It stars an ensemble cast of Jason Clarke,
+                    Josh Brolin, John Hawkes, Robin Wright, Michael Kelly, Sam Worthington, Keira Knightley, Emily Watson,
+                    and Jake Gyllenhaal.</p>
+            </div>
+        </div>
+        <div class="movie_frame">
+            <img class="movie_poster" src="inferno_logo.jpg" alt="Inferno Poster">
+            <h2>Inferno</h2>
+            <input type="checkbox"  id="spoiler2" />
+            <label for="spoiler2">Description</label>
+            <div class="spoiler">
+                <p class="movie_description" id="easter_egg" onmousedown="mouseDown()" onmouseup="mouseUp()">Inferno is a 2016 American mystery action thriller film directed by Ron Howard
+                    and written by David Koepp, based on the 2013 novel of the same name by Dan Brown.</p>
+                <p id="congrats">Found me</p>
+                <script>
+                    function mouseDown() {document.getElementById("easter_egg").style.color = "orange";}
+                    function mouseUp() {document.getElementById("easter_egg").style.color = "gray";}
+                    document.getElementById("congrats").addEventListener("mouseover", changeBackGrnd);
+                    function changeBackGrnd() {document.getElementById("congrats").innerText = "Nice one, now one more";}
+                </script>
+            </div>
+        </div>
+        <div class="movie_frame">
+            <img class="movie_poster" src="nun_poster.jpg" alt="Nun Poster">
+            <h2>Nun</h2>
+            <input type="checkbox" id="spoiler3" />
+            <label for="spoiler3">Description</label>
+            <div class="spoiler">
+                <p class="movie_description">The Nun is a 2018 American gothic supernatural horror film directed by Corin
+                    Hardy and written by Gary Dauberman, from a story by Dauberman and James Wan.</p>
+            </div>
+        </div>
+        <div class="movie_frame">
+            <img class="movie_poster" src="suicide_squad_poster.jpg" alt="Suicide Squad Poster">
+            <h2>Suicide Squad</h2>
+            <input type="checkbox" id="spoiler4" />
+            <label for="spoiler4">Description</label>
+            <div class="spoiler">
+                <p class="movie_description">Suicide Squad is a 2016 American superhero film based on the DC Comics
+                    supervillain team of the same name, distributed by Warner Bros. Pictures.</p>
+            </div>
+    </div>
+    <div class="movie_frame">
+        <img class="movie_poster" src="indiana_jones_poster.jpg" alt="Indiana Jones Poster">
+        <h2>Indiana Jones</h2>
+        <input type="checkbox" id="spoiler5" />
+        <label for="spoiler5">Description</label>
+        <div class="spoiler">
+            <p class="movie_description">Indiana Jones and the Temple of Doom is a 1984 American action-adventure film
+                directed by Steven Spielberg. It is the second installment in the Indiana Jones franchise and a prequel
+                to the 1981 film Raiders of the Lost Ark, featuring Harrison Ford reprising his role as the title
+                character.</p>
+        </div>
+    </div>
+    <div class="movie_frame">
+        <img class="movie_poster" src="lotr_poster.jpeg" alt="Lord Of The Rings Poster">
+        <h2>LOTR: Fellowship of the Ring</h2>
+        <input type="checkbox" id="spoiler6" />
+        <label for="spoiler6">Description</label>
+        <div class="spoiler">
+            <p class="movie_description">The Lord of the Rings: The Fellowship of the Ring is a 2001 epic fantasy
+                adventure film directed by Peter Jackson based on the first volume of J. R. R. Tolkien's The Lord of
+                the Rings. It is the first instalment in the The Lord of the Rings trilogy, and was followed by The Two
+                Towers (2002) and The Return of the King (2003), based on the second and third volumes of The Lord of
+                the Rings.</p>
+        </div>
+    </div>
+    <div class="movie_frame">
+        <img class="movie_poster" src="john_wick_poster.jpg" alt="John Wick 3 poster">
+        <h2>John Wick 3: Parabellum</h2>
+        <input type="checkbox" id="spoiler7" />
+        <label for="spoiler7">Description</label>
+        <div class="spoiler">
+            <p class="movie_description">John Wick: Chapter 3 – Parabellum (also known as John Wick: Chapter 3 or simply
+                John Wick 3) is a 2019 American neo-noir action thriller film starring Keanu Reeves as the titular
+                character. It is the third installment in the John Wick film series, following John Wick (2014) and
+                John Wick: Chapter 2 (2017).</p>
+        </div>
+    </div>
+    <div class="movie_frame">
+        <img class="movie_poster" src="avengers_endgame_poster.jpg" alt="Avengers Endgame Poster">
+        <h2>Avengers: Endgame</h2>
+        <input type="checkbox" id="spoiler8" />
+        <label for="spoiler8">Description</label>
+        <div class="spoiler">
+            <p class="movie_description" id="mDescription">Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics
+                superhero team the Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion
+                Pictures. It is the sequel to 2012's The Avengers, 2015's Avengers: Age of Ultron, and 2018's Avengers:
+                Infinity War, and the twenty-second film in the Marvel Cinematic Universe (MCU).</p>
+        <script>
+            document.getElementById("mDescription").addEventListener("mouseover", changeBackGrnd);
+            function changeBackGrnd() {document.getElementById("mDescription").innerText = "What have you done?!";}
+        </script>
+        </div>
+    </div>
+    </div>
+    <div class="date_imp">
+        <button id="date_button">Lost in Time?</button>
+        <p id="date_placeholder"></p>
+        <script>
+            document.getElementById("date_button").addEventListener("click", displayDate);
+            function displayDate() {document.getElementById("date_placeholder").innerHTML = Date();}
+        </script>
+    </div>
+</main>
+<footer class="footer">
+    <p id="contacts">
+        Contact us via:<br>
+        <b>Email:</b>demoris19@gmail.com<br>
+        <b>Cellphone:</b> +38067*******<br>
+        <b>Address:</b> Ukraine, Lviv, smth Street/smth Number<br>
+    </p>
+    <p id="Footer_final_text">
+        Copyright © 2020  Mrovie <br>
+        All Rights Reserved
+    </p>
+</footer>
+</body>
+</html>
